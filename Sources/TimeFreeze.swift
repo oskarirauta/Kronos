@@ -11,13 +11,13 @@ struct TimeFreeze {
 
     /// The stable timestamp adjusted by the most acurrate offset known so far.
     var adjustedTimestamp: TimeInterval {
-        return self.offset + self.stableTimestamp
+        get { return self.offset + self.stableTimestamp }
     }
 
     /// The stable timestamp (calculated based on the uptime); note that this doesn't have sub-seconds
     /// precision. See `systemUptime()` for more information.
     var stableTimestamp: TimeInterval {
-        return (TimeFreeze.systemUptime() - self.uptime) + self.timestamp
+        get { return (TimeFreeze.systemUptime() - self.uptime) + self.timestamp }
     }
 
     init(offset: TimeInterval) {
@@ -28,8 +28,7 @@ struct TimeFreeze {
 
     init?(from dictionary: [String: TimeInterval]) {
         guard let uptime = dictionary[kUptimeKey], let timestamp = dictionary[kTimestampKey],
-            let offset = dictionary[kOffsetKey] else
-        {
+            let offset = dictionary[kOffsetKey] else {
             return nil
         }
 

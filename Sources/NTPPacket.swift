@@ -190,11 +190,11 @@ extension NTPPacket {
 
     /// Clocks offset in seconds.
     var offset: TimeInterval {
-        return ((self.receiveTime - self.originTime) + (self.transmitTime - self.destinationTime)) / 2.0
+        get { return ((self.receiveTime - self.originTime) + (self.transmitTime - self.destinationTime)) / 2.0 }
     }
 
     /// Round-trip delay in seconds
     var delay: TimeInterval {
-        return (self.destinationTime - self.originTime) - (self.transmitTime - self.receiveTime)
+        get { return (self.destinationTime - self.originTime) - (self.transmitTime - self.receiveTime) }
     }
 }

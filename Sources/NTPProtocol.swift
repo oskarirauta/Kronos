@@ -12,15 +12,13 @@ enum LeapIndicator: Int8 {
 
     /// Human readable value of the leap warning.
     var description: String {
-        switch self {
-        case .noWarning:
-            return "No warning"
-        case .sixtyOneSeconds:
-            return "Last minute of the day has 61 seconds"
-        case .fiftyNineSeconds:
-            return "Last minute of the day has 59 seconds"
-        case .alarm:
-            return "Unknown (clock unsynchronized)"
+        get {
+            switch self {
+            case .noWarning: return "No warning"
+            case .sixtyOneSeconds: return "Last minute of the day has 61 seconds"
+            case .fiftyNineSeconds: return "Last minute of the day has 59 seconds"
+            case .alarm: return "Unknown (clock unsynchronized)"
+            }
         }
     }
 }
@@ -77,15 +75,12 @@ enum ClockSource {
 
     /// The id for the reference clock (IANA, stratum 1), debug (stratum 0) or referenceIdentifier
     var ID: UInt32 {
-        switch self {
-        case .referenceClock(let id, _):
-            return id
-
-        case .debug(let id):
-            return id
-
-        case .referenceIdentifier(let id):
-            return id
+        get {
+            switch self {
+            case .referenceClock(let id, _): return id
+            case .debug(let id): return id
+            case .referenceIdentifier(let id): return id
+            }
         }
     }
 

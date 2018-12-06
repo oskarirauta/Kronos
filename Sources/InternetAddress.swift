@@ -10,32 +10,33 @@ enum InternetAddress: Hashable {
 
     /// Human readable host represetnation (e.g. '192.168.1.1' or 'ab:ab:ab:ab:ab:ab:ab:ab').
     var host: String? {
-        switch self {
-        case .ipv6(var address):
-            var buffer = [CChar](repeating: 0, count: Int(INET6_ADDRSTRLEN))
-            inet_ntop(AF_INET6, &address.sin6_addr, &buffer, socklen_t(INET6_ADDRSTRLEN))
-            return String(cString: buffer)
-
-        case .ipv4(var address):
-            var buffer = [CChar](repeating: 0, count: Int(INET_ADDRSTRLEN))
-            inet_ntop(AF_INET, &address.sin_addr, &buffer, socklen_t(INET_ADDRSTRLEN))
-            return String(cString: buffer)
+        get {
+            switch self {
+            case .ipv6(var address):
+                var buffer = [CChar](repeating: 0, count: Int(INET6_ADDRSTRLEN))
+                inet_ntop(AF_INET6, &address.sin6_addr, &buffer, socklen_t(INET6_ADDRSTRLEN))
+                return String(cString: buffer)
+                
+            case .ipv4(var address):
+                var buffer = [CChar](repeating: 0, count: Int(INET_ADDRSTRLEN))
+                inet_ntop(AF_INET, &address.sin_addr, &buffer, socklen_t(INET_ADDRSTRLEN))
+                return String(cString: buffer)
+            }
         }
     }
 
     /// The protocol family that should be used on the socket creation for this address.
     var family: Int32 {
-        switch self {
-        case .ipv4:
-            return PF_INET
-
-        case .ipv6:
-            return PF_INET6
+        get {
+            switch self {
+            case .ipv4: return PF_INET
+            case .ipv6: return PF_INET6
+            }
         }
     }
 
     var hashValue: Int {
-        return self.host?.hashValue ?? 0
+        get { return self.host?.hashValue ?? 0 }
     }
 
     init?(storage: UnsafePointer<sockaddr_storage>) {
