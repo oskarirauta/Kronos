@@ -16,6 +16,9 @@ import Foundation
 /// ```
 public struct Clock {
     
+    /// True after first ntp sync has been done
+    public private(set) static var synced: Bool = false
+    
     private static var stableTime: TimeFreeze? {
         didSet { self.storage.stableTime = self.stableTime }
     }
@@ -55,6 +58,7 @@ public struct Clock {
                 self.stableTime = TimeFreeze(offset: offset)
 
                 if done == 1, let now = self.now {
+                    self.synced = true
                     first?(now, offset)
                 }
             }
@@ -68,14 +72,17 @@ public struct Clock {
     /// Resets all state of the monotonic clock. Note that you won't be able to access `now` until you `sync`
     /// again.
     public static func reset() {
+        self.synced = false
         self.stableTime = nil
     }
 
     private static func loadFromDefaults() {
         guard let previousStableTime = self.storage.stableTime else {
             self.stableTime = nil
+            self.synced = false
             return
         }
         self.stableTime = previousStableTime
+        self.synced = false
     }
 }
