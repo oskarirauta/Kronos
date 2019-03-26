@@ -76,7 +76,7 @@ public struct Clock {
         self.stableTime = nil
     }
 
-    private static func loadFromDefaults() {
+    public static func loadFromDefaults() {
         guard let previousStableTime = self.storage.stableTime else {
             self.stableTime = nil
             self.synced = false

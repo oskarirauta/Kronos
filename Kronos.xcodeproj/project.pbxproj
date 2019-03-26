@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,24 +16,8 @@
 		26447D821D6E54D400159BEE /* NTPPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D791D6E54D400159BEE /* NTPPacket.swift */; };
 		26447D831D6E54D400159BEE /* NTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D7A1D6E54D400159BEE /* NTPProtocol.swift */; };
 		26447D841D6E54D400159BEE /* TimeFreeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D7B1D6E54D400159BEE /* TimeFreeze.swift */; };
-		26447D891D6E54FF00159BEE /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D851D6E54FF00159BEE /* ClockTests.swift */; };
-		26447D8A1D6E54FF00159BEE /* DNSResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D861D6E54FF00159BEE /* DNSResolverTests.swift */; };
-		26447D8B1D6E54FF00159BEE /* NTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D871D6E54FF00159BEE /* NTPClientTests.swift */; };
-		26447D8C1D6E54FF00159BEE /* NTPPacketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26447D881D6E54FF00159BEE /* NTPPacketTests.swift */; };
 		930B39DD2051E6D300360BA2 /* TimeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930B39DC2051E6D300360BA2 /* TimeStorage.swift */; };
-		930B39E02051F26500360BA2 /* TimeStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930B39DE2051F25300360BA2 /* TimeStorageTests.swift */; };
-		C201748E1BD5509D00E4FE18 /* Kronos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20174831BD5509D00E4FE18 /* Kronos.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C201748F1BD5509D00E4FE18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C201747A1BD5509D00E4FE18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C20174821BD5509D00E4FE18;
-			remoteInfo = Kronos;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		26447D731D6E54D400159BEE /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
@@ -52,23 +36,11 @@
 		930B39DC2051E6D300360BA2 /* TimeStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStorage.swift; sourceTree = "<group>"; };
 		930B39DE2051F25300360BA2 /* TimeStorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStorageTests.swift; sourceTree = "<group>"; };
 		C20174831BD5509D00E4FE18 /* Kronos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kronos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C201748D1BD5509D00E4FE18 /* KronosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KronosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C036D11C2B180D003FB853 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2C036D41C2B180D003FB853 /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
 		C2C036D51C2B180D003FB853 /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		C2C036D61C2B180D003FB853 /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C201748A1BD5509D00E4FE18 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C201748E1BD5509D00E4FE18 /* Kronos.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C20174791BD5509D00E4FE18 = {
@@ -85,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				C20174831BD5509D00E4FE18 /* Kronos.framework */,
-				C201748D1BD5509D00E4FE18 /* KronosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,23 +135,6 @@
 			productReference = C20174831BD5509D00E4FE18 /* Kronos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C201748C1BD5509D00E4FE18 /* KronosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C201749A1BD5509D00E4FE18 /* Build configuration list for PBXNativeTarget "KronosTests" */;
-			buildPhases = (
-				C20174891BD5509D00E4FE18 /* Sources */,
-				C201748A1BD5509D00E4FE18 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C20174901BD5509D00E4FE18 /* PBXTargetDependency */,
-			);
-			name = KronosTests;
-			productName = KronosTests;
-			productReference = C201748D1BD5509D00E4FE18 /* KronosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,25 +142,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Lyft;
 				TargetAttributes = {
 					C20174821BD5509D00E4FE18 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 1000;
-					};
-					C201748C1BD5509D00E4FE18 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = C201747D1BD5509D00E4FE18 /* Build configuration list for PBXProject "Kronos" */;
-			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C20174791BD5509D00E4FE18;
 			productRefGroup = C20174841BD5509D00E4FE18 /* Products */;
@@ -214,7 +165,6 @@
 			projectRoot = "";
 			targets = (
 				C20174821BD5509D00E4FE18 /* Kronos */,
-				C201748C1BD5509D00E4FE18 /* KronosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,33 +187,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C20174891BD5509D00E4FE18 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				930B39E02051F26500360BA2 /* TimeStorageTests.swift in Sources */,
-				26447D8C1D6E54FF00159BEE /* NTPPacketTests.swift in Sources */,
-				26447D8B1D6E54FF00159BEE /* NTPClientTests.swift in Sources */,
-				26447D891D6E54FF00159BEE /* ClockTests.swift in Sources */,
-				26447D8A1D6E54FF00159BEE /* DNSResolverTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C20174901BD5509D00E4FE18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C20174821BD5509D00E4FE18 /* Kronos */;
-			targetProxy = C201748F1BD5509D00E4FE18 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C20174951BD5509D00E4FE18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -320,6 +251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -358,7 +290,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -380,12 +313,16 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lyft.Kronos;
 				PRODUCT_NAME = Kronos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -404,39 +341,16 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Lyft.Kronos;
 				PRODUCT_NAME = Kronos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
-		C201749B1BD5509D00E4FE18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C036D61C2B180D003FB853 /* UniversalFramework_Test.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Lyft.KronosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		C201749C1BD5509D00E4FE18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C036D61C2B180D003FB853 /* UniversalFramework_Test.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Lyft.KronosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -457,15 +371,6 @@
 			buildConfigurations = (
 				C20174981BD5509D00E4FE18 /* Debug */,
 				C20174991BD5509D00E4FE18 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C201749A1BD5509D00E4FE18 /* Build configuration list for PBXNativeTarget "KronosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C201749B1BD5509D00E4FE18 /* Debug */,
-				C201749C1BD5509D00E4FE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

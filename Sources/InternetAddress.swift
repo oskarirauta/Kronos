@@ -35,6 +35,10 @@ enum InternetAddress: Hashable {
         }
     }
 
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.host)
+    }
+    
     var hashValue: Int {
         get { return self.host?.hashValue ?? 0 }
     }
